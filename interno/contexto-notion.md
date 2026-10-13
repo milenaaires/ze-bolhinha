@@ -61,3 +61,9 @@ Status conforme a base Tasks do Notion consultada em 13/10/2026. Responsáveis f
 ## Atenção na migração
 
 Não copiar para o site listas de participantes, respostas de entrevistas, transcrições, feedbacks individuais ou conteúdo de formulário. Esses materiais podem identificar pessoas. Mantenha-os fora de `docs/` e confirme o escopo de acesso antes de incluí-los no GitHub.
+
+## Histórico de versões
+
+| Versão | Data | Alteração | Responsável pela edição |
+|---|---|---|---|
+| 1.1 | 13/10/2026 | Organização do contexto consultado no Notion neste repositório. | Milena Aires |

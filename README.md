@@ -23,3 +23,9 @@ mkdocs serve
 
 O conteúdo estruturado a partir do Notion é um retrato do estado encontrado em 13/10/2026. O Notion continua sendo a fonte original; mudanças feitas lá não são sincronizadas automaticamente com este repositório. O GitHub Pages é público, mesmo com este repositório privado: revise os arquivos em `docs/` antes de cada publicação.
 
+## Histórico de versões
+
+| Versão | Data | Alteração | Responsável pela edição |
+|---|---|---|---|
+| 1.1 | 13/10/2026 | Registro do fluxo de organização dos conteúdos do Notion e publicação no Pages. | Milena Aires |
+

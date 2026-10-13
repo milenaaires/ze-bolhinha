@@ -4,6 +4,19 @@ site_description: Documentação do projeto Zé Bolhinha
 theme:
   name: material
   language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para tema escuro
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para tema claro
   features:
     - navigation.sections
     - navigation.expand
@@ -18,4 +31,10 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+nav:
+  - Início: index.md
+  - Projeto: projeto/visao-geral.md
+  - Discovery: pesquisa/discovery.md
+  - Andamento: pesquisa/andamento.md
 
