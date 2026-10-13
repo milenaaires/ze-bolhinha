@@ -36,5 +36,6 @@ nav:
   - Início: index.md
   - Projeto: projeto/visao-geral.md
   - Discovery: pesquisa/discovery.md
+  - Deep dive: pesquisa/deep-dive.md
   - Andamento: pesquisa/andamento.md
 

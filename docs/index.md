@@ -8,6 +8,7 @@ A ideia selecionada na imersão combina diagnóstico da bolha informacional com 
 
 - [Visão geral do projeto](projeto/visao-geral.md)
 - [Discovery e imersão](pesquisa/discovery.md)
+- [Deep dive: fundamento, stakeholders, soluções e mercado](pesquisa/deep-dive.md)
 - [Andamento e entregas registradas](pesquisa/andamento.md)
 
 ## Atualizações
@@ -20,4 +21,4 @@ Os arquivos Markdown versionados em `docs/` são publicados automaticamente pelo
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
-| 1.1 | 13/10/2026 | Organização dos conteúdos do Notion e publicação da navegação no Pages. | Milena Aires |
+| 1.2 | 13/10/2026 | Inclusão dos conteúdos de deep dive extraídos do Notion no Pages. | Milena Aires |

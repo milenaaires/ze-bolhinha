@@ -45,8 +45,10 @@ A prototipação estava pendente no material consultado. Viabilidade técnica, a
 
 Síntese do documento [Discovery — Imersão de Inovação](https://app.notion.com/p/3eb93942393281559916e513ee8ea3a6), que registra artefatos do board do Miro produzidos em 26 e 27/09/2026. As ideias e critérios acima refletem o material exploratório do grupo.
 
+O aprofundamento dos quatro pilares da Sessão 5 está em [Deep dive: fundamento, stakeholders, soluções e mercado](deep-dive.md), com as notas de verificação das fontes.
+
 ## Histórico de versões
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
-| 1.1 | 13/10/2026 | Organização dos resultados da imersão registrados no Notion para publicação no Pages. | Milena Aires |
+| 1.2 | 13/10/2026 | Ligação entre a síntese da imersão e o conteúdo integral do deep dive do Notion no Pages. | Milena Aires |
