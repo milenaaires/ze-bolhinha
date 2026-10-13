@@ -1,0 +1,21 @@
+site_name: Zé Bolhinha
+site_description: Documentação do projeto Zé Bolhinha
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+
