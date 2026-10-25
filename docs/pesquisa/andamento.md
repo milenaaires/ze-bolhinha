@@ -11,7 +11,7 @@ Este resumo organiza entregas e resultados localizados nos documentos e tarefas 
 | Deep dive (Sessão 5) | Fundamentos, stakeholders, soluções existentes, dados de mercado e matriz exploratória de lacunas. | Conteúdo extraído do Notion e organizado em [Deep dive](deep-dive.md); algumas fontes, avaliações e números permanecem pendentes de validação. |
 | Prototipação | O registro prevê um aplicativo digital com diagnóstico e mascote. | O protótipo ainda não aparece documentado como concluído. |
 | Formulário da pesquisa (rodada 1) | Questionário com perguntas fechadas e algumas abertas, consentimento destacado (LGPD) e convite para entrevista. | Concluído. O instrumento está em [Formulário](eleitores/formulario.md); as respostas não são publicadas. |
-| Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). A metodologia de seleção dos entrevistados está em revisão, e as entrevistas começaram em 22/10. |
+| Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). Os entrevistados foram selecionados pela [metodologia](eleitores/metodologia-selecao.md) escolhida pelo grupo, e as entrevistas começaram em 22/10. |
 
 ## Limites e próximos aprofundamentos
 

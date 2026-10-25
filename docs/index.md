@@ -12,6 +12,7 @@ A ideia selecionada na imersão combina diagnóstico da bolha informacional com 
 - [Discovery e imersão](pesquisa/discovery.md)
 - [Deep dive: fundamento, stakeholders, soluções e mercado](pesquisa/deep-dive.md)
 - [Formulário da pesquisa com eleitores (rodada 1)](pesquisa/eleitores/formulario.md)
+- [Metodologia de seleção dos entrevistados](pesquisa/eleitores/metodologia-selecao.md)
 - [Roteiro e registro de entrevistas](pesquisa/eleitores/roteiro-entrevista.md)
 - [Andamento e entregas registradas](pesquisa/andamento.md)
 

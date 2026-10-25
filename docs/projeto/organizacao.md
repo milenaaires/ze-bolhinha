@@ -39,6 +39,14 @@ Cada sprint dura duas semanas e começa na segunda-feira.
 | A (abre a sprint) | Planning, 17h–18h | Weekly + feedback semanal, 12h–13h |
 | B (fecha a sprint) | Checkpoint, 17h–17h45 | Sprint Review + Retro, 12h–13h |
 
+Além dos ritos da sprint, há três **reuniões de feedback do projeto**, sempre às 19h30. Elas substituem o alinhamento com a mentoria que estava previsto no plano.
+
+| Reunião | Data |
+|---|---|
+| Feedback 1 | 28/10 (quarta) |
+| Feedback 2 | 27/11 (sexta) |
+| Feedback 3 | 17/12 (quinta) |
+
 | Sprint | Período | Liderança |
 |---|---|---|
 | S0 | 28/09–04/10 | João |
