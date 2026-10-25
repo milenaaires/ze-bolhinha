@@ -1,6 +1,6 @@
 # Andamento e entregas registradas
 
-Este resumo organiza entregas e resultados localizados nos documentos e tarefas do Notion consultados em 13/10/2026. A página [Deep dive: fundamento, stakeholders, soluções e mercado](deep-dive.md) reúne o conteúdo do artefato da Sessão 5; ela diferencia observações do grupo de dados e fontes verificados.
+Este resumo organiza entregas e resultados localizados nos documentos e tarefas do Notion consultados em 13/10/2026 e revistos em 25/10/2026, na primeira troca de liderança. A página [Deep dive: fundamento, stakeholders, soluções e mercado](deep-dive.md) reúne o conteúdo do artefato da Sessão 5; ela diferencia observações do grupo de dados e fontes verificados.
 
 ## Resultados documentados
 
@@ -10,7 +10,8 @@ Este resumo organiza entregas e resultados localizados nos documentos e tarefas 
 | Ideação | Conceito selecionado: diagnóstico da bolha a partir do feed, combinado com mascote virtual. | Hipótese escolhida; alternativas e critérios estão na síntese de Discovery. |
 | Deep dive (Sessão 5) | Fundamentos, stakeholders, soluções existentes, dados de mercado e matriz exploratória de lacunas. | Conteúdo extraído do Notion e organizado em [Deep dive](deep-dive.md); algumas fontes, avaliações e números permanecem pendentes de validação. |
 | Prototipação | O registro prevê um aplicativo digital com diagnóstico e mascote. | O protótipo ainda não aparece documentado como concluído. |
-| Roteiro de entrevistas (rodada 1) | Meta de ouvir 15 eleitores de perfis variados e tentar incluir uma pessoa especialista, com perguntas fechadas e algumas abertas. | Tarefa marcada como concluída; roteiro e resultados não foram reproduzidos nesta página. |
+| Formulário da pesquisa (rodada 1) | Questionário com perguntas fechadas e algumas abertas, consentimento destacado (LGPD) e convite para entrevista. | Concluído. O instrumento está em [Formulário](eleitores/formulario.md); as respostas não são publicadas. |
+| Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). A metodologia de seleção dos entrevistados está em revisão, e as entrevistas começaram em 22/10. |
 
 ## Limites e próximos aprofundamentos
 
@@ -25,7 +26,7 @@ O artefato da Sessão 5 oferece mais conteúdo do que as descrições das tarefa
 
 ## Pesquisa com eleitores e privacidade
 
-A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. A base de tarefas também registra a preparação de um template padronizado para anotações e síntese como trabalho em andamento. Não foram incluídos neste site listas de participantes, respostas, transcrições ou citações de entrevistas.
+A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. O formulário recebeu 107 respostas, e 41 pessoas aceitaram ser entrevistadas. O registro padronizado das entrevistas está pronto e em uso no Notion. Não foram incluídos neste site listas de participantes, respostas, transcrições ou citações de entrevistas.
 
 Quando a síntese estiver pronta, registre somente achados agregados e revise qualquer trecho que possa identificar alguém, direta ou indiretamente, antes de publicar. O repositório e o Pages são públicos.
 
@@ -39,6 +40,8 @@ Quando a síntese estiver pronta, registre somente achados agregados e revise qu
 - [Deep dive: Stakeholders](https://app.notion.com/p/3eb93942393281e5bcbef5be45c07992)
 - [Pesquisa sobre índices eleitorais](https://app.notion.com/p/3ec9394239328092a79ecdf2bd665893)
 - [Template de registro e síntese de entrevistas](https://app.notion.com/p/3f49394239328126a293e562fdcf2ff7)
+- [Formulário da pesquisa com eleitores (rodada 1)](https://app.notion.com/p/3ef939423932807bb033e7344126b9ef)
+- [Pesquisa de campo - Bolhas de informação](https://app.notion.com/p/3f993942393281b3a613dd40af16a2d2)
 
 Os links do Notion podem exigir acesso ao workspace do grupo. A atualização do Pages é automática após alterações versionadas no repositório; mudanças feitas somente no Notion não são sincronizadas automaticamente.
 
@@ -46,5 +49,6 @@ Os links do Notion podem exigir acesso ao workspace do grupo. A atualização do
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.2 | 25/10/2026 | Inclusão do formulário e do roteiro de entrevistas da rodada 1 e atualização do estado da pesquisa com eleitores na troca de liderança. | João Marcelo Dantas |
 | 1.1 | 13/10/2026 | Atualização do andamento com o conteúdo do deep dive consolidado no Pages e os pontos ainda pendentes de validação. | Milena Aires |
 | 1.0 | 13/10/2026 | Organização do andamento das tarefas e entregas registrados no Notion para consulta no Pages. | Milena Aires |
