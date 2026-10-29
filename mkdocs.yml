@@ -34,8 +34,15 @@ markdown_extensions:
 
 nav:
   - Início: index.md
-  - Projeto: projeto/visao-geral.md
+  - Projeto:
+      - Visão geral: projeto/visao-geral.md
+      - Organização do trabalho: projeto/organizacao.md
+      - Passagem de liderança: projeto/passagem-de-lideranca.md
   - Discovery: pesquisa/discovery.md
   - Deep dive: pesquisa/deep-dive.md
+  - Pesquisa com eleitores:
+      - Formulário (rodada 1): pesquisa/eleitores/formulario.md
+      - Metodologia de seleção: pesquisa/eleitores/metodologia-selecao.md
+      - Roteiro e registro de entrevistas: pesquisa/eleitores/roteiro-entrevista.md
   - Andamento: pesquisa/andamento.md
 

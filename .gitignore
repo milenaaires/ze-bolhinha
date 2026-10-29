@@ -1,0 +1,10 @@
+# Dados pessoais da pesquisa: nunca versionar (o repositório é público)
+*RESTRITO*
+*respostas*
+*.xlsx
+*.csv
+
+# Ambiente local
+.venv/
+site/
+__pycache__/
