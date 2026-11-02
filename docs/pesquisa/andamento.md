@@ -12,6 +12,7 @@ Este resumo organiza entregas e resultados localizados nos documentos e tarefas 
 | Prototipação | O registro prevê um aplicativo digital com diagnóstico e mascote. | O protótipo ainda não aparece documentado como concluído. |
 | Formulário da pesquisa (rodada 1) | Questionário com perguntas fechadas e algumas abertas, consentimento destacado (LGPD) e convite para entrevista. | Concluído. O instrumento está em [Formulário](eleitores/formulario.md); as respostas não são publicadas. |
 | Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). Os entrevistados foram selecionados pela [metodologia](eleitores/metodologia-selecao.md) escolhida pelo grupo, e as entrevistas começaram em 22/10. |
+| Matriz de direcionadores da persona | Organização dos direcionadores pedidos na issue #20, preenchida com totais agregados do formulário sobre idade, canais, fontes, confiança e sinais de bolha. | Rascunho local em [Matriz de direcionadores](eleitores/matriz-persona.md). A síntese qualitativa das entrevistas ainda precisa ser incorporada; região não foi coletada no formulário. |
 
 ## Limites e próximos aprofundamentos
 
@@ -29,6 +30,8 @@ O artefato da Sessão 5 oferece mais conteúdo do que as descrições das tarefa
 A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. O formulário recebeu 107 respostas, e 41 pessoas aceitaram ser entrevistadas. O registro padronizado das entrevistas está pronto e em uso no Notion. Não foram incluídos neste site listas de participantes, respostas, transcrições ou citações de entrevistas.
 
 Quando a síntese estiver pronta, registre somente achados agregados e revise qualquer trecho que possa identificar alguém, direta ou indiretamente, antes de publicar. O repositório e o Pages são públicos.
+
+O formulário, a metodologia de seleção e o roteiro oferecem contexto agregado suficiente para orientar uma matriz preliminar, mas não substituem a leitura dos registros qualitativos. A [matriz da persona](eleitores/matriz-persona.md) mantém essas evidências separadas das lacunas que dependem das entrevistas. O resumo foi preparado sem publicar respostas individuais nem os campos de contato.
 
 ## Fontes no Notion
 
@@ -49,6 +52,8 @@ Os links do Notion podem exigir acesso ao workspace do grupo. A atualização do
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.4 | 02/11/2026 | Inclusão da matriz de persona preenchida com totais agregados do formulário, mantendo os resultados individuais fora do Pages. | Milena Aires |
+| 1.3 | 02/11/2026 | Registro da matriz preliminar da persona e das lacunas da síntese qualitativa. | Milena Aires |
 | 1.2 | 25/10/2026 | Inclusão do formulário e do roteiro de entrevistas da rodada 1 e atualização do estado da pesquisa com eleitores na troca de liderança. | João Marcelo Dantas |
 | 1.1 | 13/10/2026 | Atualização do andamento com o conteúdo do deep dive consolidado no Pages e os pontos ainda pendentes de validação. | Milena Aires |
 | 1.0 | 13/10/2026 | Organização do andamento das tarefas e entregas registrados no Notion para consulta no Pages. | Milena Aires |

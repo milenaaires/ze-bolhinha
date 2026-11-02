@@ -14,6 +14,7 @@ A ideia selecionada na imersão combina diagnóstico da bolha informacional com 
 - [Formulário da pesquisa com eleitores (rodada 1)](pesquisa/eleitores/formulario.md)
 - [Metodologia de seleção dos entrevistados](pesquisa/eleitores/metodologia-selecao.md)
 - [Roteiro e registro de entrevistas](pesquisa/eleitores/roteiro-entrevista.md)
+- [Matriz de direcionadores da persona](pesquisa/eleitores/matriz-persona.md)
 - [Andamento e entregas registradas](pesquisa/andamento.md)
 
 ## Atualizações
@@ -26,5 +27,6 @@ Os arquivos Markdown versionados em `docs/` são publicados automaticamente pelo
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.4 | 02/11/2026 | Inclusão da matriz de direcionadores da persona para a pesquisa com eleitores. | Milena Aires |
 | 1.3 | 25/10/2026 | Inclusão das páginas de organização do trabalho, passagem de liderança e pesquisa com eleitores. | João Marcelo Dantas |
 | 1.2 | 13/10/2026 | Inclusão dos conteúdos de deep dive extraídos do Notion no Pages. | Milena Aires |
