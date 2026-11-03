@@ -12,7 +12,7 @@ Este resumo organiza entregas e resultados localizados nos documentos e tarefas 
 | Prototipação | O registro prevê um aplicativo digital com diagnóstico e mascote. | O protótipo ainda não aparece documentado como concluído. |
 | Formulário da pesquisa (rodada 1) | Questionário com perguntas fechadas e algumas abertas, consentimento destacado (LGPD) e convite para entrevista. | Concluído. O instrumento está em [Formulário](eleitores/formulario.md); as respostas não são publicadas. |
 | Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). Os entrevistados foram selecionados pela [metodologia](eleitores/metodologia-selecao.md) escolhida pelo grupo, e as entrevistas começaram em 22/10. |
-| Matriz de direcionadores da persona | Organização dos direcionadores pedidos na issue #20, preenchida com totais agregados do formulário sobre idade, canais, fontes, confiança e sinais de bolha. | Rascunho local em [Matriz de direcionadores](eleitores/matriz-persona.md). A síntese qualitativa das entrevistas ainda precisa ser incorporada; região não foi coletada no formulário. |
+| Matriz de direcionadores da persona | Matriz concluída com dados agregados do formulário da rodada 1: idade, canais, confiança, influência e sinais autorrelatados de bolha. | Publicada em [Matriz de direcionadores](eleitores/matriz-persona.md). Região não foi coletada; a síntese das entrevistas pertence a outra task e não bloqueia esta entrega. |
 
 ## Limites e próximos aprofundamentos
 
@@ -31,7 +31,7 @@ A primeira rodada foi planejada para explorar se o problema priorizado aparece n
 
 Quando a síntese estiver pronta, registre somente achados agregados e revise qualquer trecho que possa identificar alguém, direta ou indiretamente, antes de publicar. O repositório e o Pages são públicos.
 
-O formulário, a metodologia de seleção e o roteiro oferecem contexto agregado suficiente para orientar uma matriz preliminar, mas não substituem a leitura dos registros qualitativos. A [matriz da persona](eleitores/matriz-persona.md) mantém essas evidências separadas das lacunas que dependem das entrevistas. O resumo foi preparado sem publicar respostas individuais nem os campos de contato.
+A [matriz da persona](eleitores/matriz-persona.md) registra exclusivamente os resultados agregados do formulário e está concluída para o escopo da issue #20. A síntese das entrevistas é acompanhada em uma task separada. O resumo foi preparado sem publicar respostas individuais nem os campos de contato.
 
 ## Fontes no Notion
 
