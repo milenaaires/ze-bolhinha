@@ -29,29 +29,32 @@ O artefato da Sessão 5 oferece mais conteúdo do que as descrições das tarefa
 
 ## Pesquisa com eleitores e privacidade
 
-A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. O formulário recebeu 107 respostas, e 41 pessoas aceitaram ser entrevistadas. Foram feitas 5 entrevistas, registradas no Notion. Este site não inclui listas de participantes, respostas nem transcrições. A [síntese das entrevistas](eleitores/sintese-entrevistas.md) publica só achados agregados e trechos curtos sem identificar quem falou, e passou por revisão de privacidade antes da publicação. O repositório e o Pages são públicos.
+A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. O formulário recebeu 107 respostas, e 41 pessoas aceitaram ser entrevistadas. Foram feitas 5 entrevistas; os registros ficam na pasta restrita do grupo no Google Drive. Este site não inclui listas de participantes, respostas nem transcrições. A [síntese das entrevistas](eleitores/sintese-entrevistas.md) publica só achados agregados e trechos curtos sem identificar quem falou, e passou por revisão de privacidade antes da publicação. O repositório e o Pages são públicos.
 
 A [matriz da persona](eleitores/matriz-persona.md) registra exclusivamente os resultados agregados do formulário e está concluída para o escopo da issue #20. A síntese das entrevistas foi feita na issue #21. O resumo foi preparado sem publicar respostas individuais nem os campos de contato.
 
-## Fontes no Notion
+## Fontes internas
 
-- [Discovery — Imersão de Inovação](https://app.notion.com/p/3eb93942393281559916e513ee8ea3a6)
-- [4. Deep dive (Sessão 5)](https://app.notion.com/p/3eb939423932812599fad25846e96d6f)
-- [Roteiro de entrevistas (rodada 1)](https://app.notion.com/p/3eb939423932812e89cecd1c0abff4eb)
-- [Deep dive: Análise de mercado](https://app.notion.com/p/3eb93942393281029928fe87c825dc5c)
-- [Deep dive: Soluções existentes](https://app.notion.com/p/3eb93942393281b4ab94e9a44c9216e2)
-- [Deep dive: Stakeholders](https://app.notion.com/p/3eb93942393281e5bcbef5be45c07992)
-- [Pesquisa sobre índices eleitorais](https://app.notion.com/p/3ec9394239328092a79ecdf2bd665893)
-- [Template de registro e síntese de entrevistas](https://app.notion.com/p/3f49394239328126a293e562fdcf2ff7)
-- [Formulário da pesquisa com eleitores (rodada 1)](https://app.notion.com/p/3ef939423932807bb033e7344126b9ef)
-- [Pesquisa de campo - Bolhas de informação](https://app.notion.com/p/3f993942393281b3a613dd40af16a2d2)
+Os documentos abaixo não são públicos: ficam na pasta privada do grupo no Google Drive. As tarefas viraram issues deste repositório.
 
-Os links do Notion podem exigir acesso ao workspace do grupo. A atualização do Pages é automática após alterações versionadas no repositório; mudanças feitas somente no Notion não são sincronizadas automaticamente.
+- Discovery — Imersão de Inovação (Drive, pasta 02 Discovery)
+- 4. Deep dive (Sessão 5) (Drive, pasta 02 Discovery)
+- [Roteiro de entrevistas (rodada 1)](https://github.com/milenaaires/ze-bolhinha/issues/8)
+- [Deep dive: Análise de mercado](https://github.com/milenaaires/ze-bolhinha/issues/11)
+- [Deep dive: Soluções existentes](https://github.com/milenaaires/ze-bolhinha/issues/5)
+- [Deep dive: Stakeholders](https://github.com/milenaaires/ze-bolhinha/issues/6)
+- [Pesquisa sobre índices eleitorais](https://github.com/milenaaires/ze-bolhinha/issues/7)
+- [Template de registro e síntese de entrevistas](https://github.com/milenaaires/ze-bolhinha/issues/16)
+- Formulário da pesquisa com eleitores (rodada 1) (Drive, pasta 03 Pesquisa com eleitores)
+- Pesquisa de campo - Bolhas de informação (Drive, pasta 03 Pesquisa com eleitores)
+
+A atualização do Pages é automática após alterações versionadas no repositório. Mudanças feitas só no Drive não aparecem aqui.
 
 ## Histórico de versões
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.7 | 05/11/2026 | Troca das fontes do Notion por referências ao Google Drive e às issues do GitHub. | Ryan Nascimento |
 | 1.6 | 04/11/2026 | Inclusão da persona. | João Marcelo Dantas |
 | 1.5 | 04/11/2026 | Encerramento da rodada 1 com 5 entrevistas e inclusão da síntese das entrevistas. | João Marcelo Dantas |
 | 1.4 | 02/11/2026 | Inclusão da matriz de persona preenchida com totais agregados do formulário, mantendo os resultados individuais fora do Pages. | Milena Aires |

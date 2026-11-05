@@ -90,8 +90,8 @@ As limitações de acesso às recomendações das plataformas, a definição de 
 
 ## Fontes e materiais de origem
 
-- [4. Deep dive (Sessão 5) — Notion](https://app.notion.com/p/3eb939423932812599fad25846e96d6f)
-- [Discovery — Imersão de Inovação — Notion](https://app.notion.com/p/3eb93942393281559916e513ee8ea3a6)
+- 4. Deep dive (Sessão 5): documento interno, no Drive do grupo (pasta 02 Discovery)
+- Discovery — Imersão de Inovação: documento interno, no Drive do grupo (pasta 02 Discovery)
 - [Board “Imersão Inovação” no Miro](https://miro.com/app/board/uXjVHiYsebg=/?moveToWidget=3458764684790535248)
 - [TIC Domicílios 2024 — Cetic.br](https://cetic.br/pt/tics/domicilios/2024/individuos/C5/)
 - [Digital News Report 2025 — Brasil](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/brazil)
@@ -106,4 +106,5 @@ As descrições de produtos, a matriz e parte dos números permanecem como regis
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.1 | 05/11/2026 | Troca dos links do Notion pelas referências aos documentos internos no Google Drive. | Ryan Nascimento |
 | 1.0 | 13/10/2026 | Conteúdo do deep dive da Sessão 5 organizado a partir do Notion, com fontes e limites de validação registrados. | Milena Aires |

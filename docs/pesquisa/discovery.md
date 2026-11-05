@@ -43,7 +43,7 @@ A prototipação estava pendente no material consultado. Viabilidade técnica, a
 
 ## Fonte
 
-Síntese do documento [Discovery — Imersão de Inovação](https://app.notion.com/p/3eb93942393281559916e513ee8ea3a6), que registra artefatos do board do Miro produzidos em 26 e 27/09/2026. As ideias e critérios acima refletem o material exploratório do grupo.
+Síntese do documento interno "Discovery — Imersão de Inovação" (Drive do grupo, pasta 02 Discovery), que registra artefatos do board do Miro produzidos em 26 e 27/09/2026. As ideias e critérios acima refletem o material exploratório do grupo.
 
 O aprofundamento dos quatro pilares da Sessão 5 está em [Deep dive: fundamento, stakeholders, soluções e mercado](deep-dive.md), com as notas de verificação das fontes.
 
@@ -51,4 +51,5 @@ O aprofundamento dos quatro pilares da Sessão 5 está em [Deep dive: fundamento
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.3 | 05/11/2026 | Troca do link do Notion pela referência ao documento interno no Google Drive. | Ryan Nascimento |
 | 1.2 | 13/10/2026 | Ligação entre a síntese da imersão e o conteúdo integral do deep dive do Notion no Pages. | Milena Aires |

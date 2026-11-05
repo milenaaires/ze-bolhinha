@@ -4,7 +4,7 @@ Este é o processo que o grupo usa para trocar de liderança a cada quatro seman
 
 O objetivo é que a próxima liderança assuma com contexto e continuidade, sem depender da memória de quem sai. É o combinado registrado nos acordos do grupo:
 
-- o caderno do Notion deve estar atualizado;
+- o caderno do projeto (antes no Notion; hoje o board do GitHub Projects e a pasta do grupo no Drive) deve estar atualizado;
 - as pendências da liderança anterior devem estar mapeadas, cada uma com pelo menos um plano de correção;
 - a nova liderança evita mudanças abruptas no jeito de trabalhar.
 
@@ -12,9 +12,9 @@ O objetivo é que a próxima liderança assuma com contexto e continuidade, sem 
 
 | Material | Onde fica | Por quê |
 |---|---|---|
-| Documento de passagem (estado do board, pendências, riscos, próximos passos) | Notion, catálogo **Docs**, fase Gestão do projeto | Cita pessoas, prazos e problemas internos; não deve ser público. |
+| Documento de passagem (estado do board, pendências, riscos, próximos passos) | Google Drive, **01 Gestão do projeto** | Cita pessoas, prazos e problemas internos; não deve ser público. |
 | Este processo e o checklist | Este repositório | É reutilizável e não contém dados internos. |
-| Decisões tomadas no período | Notion, **Registro de Decisões** | Fonte única das decisões do grupo. |
+| Decisões tomadas no período | Google Drive, **01 Gestão do projeto › Registro de Decisões** | Fonte única das decisões do grupo. |
 
 ## Checklist de quem sai
 
@@ -22,10 +22,10 @@ Fazer até a última semana do período.
 
 ### Board em ordem
 
-- [ ] Toda tarefa **Done** tem o documento vinculado em **Entregável**, e o documento está no catálogo **Docs** (não como subpágina da tarefa).
-- [ ] Toda tarefa aberta tem **Responsável**, **Sprint** e **Due date** realistas. Prazos vencidos foram revistos com quem é responsável.
-- [ ] Tarefas em **In review** têm **Revisor** e previsão de decisão.
-- [ ] Não há páginas soltas fora do teamspace do projeto.
+- [ ] Toda issue **Done** indica o entregável, e o documento está na pasta da fase certa no Drive.
+- [ ] Toda issue aberta tem **Assignees**, label de **Sprint** e **Target date** realistas. Prazos vencidos foram revistos com quem é responsável.
+- [ ] Issues em **In Review** têm **Revisor** preenchido no board e previsão de decisão.
+- [ ] Não há documentos soltos fora da pasta do grupo no Drive, nem anexos com dados pessoais em issues ou PRs.
 
 ### Contexto registrado
 
@@ -36,7 +36,7 @@ Fazer até a última semana do período.
 
 ### Documento de passagem
 
-Use esta estrutura no Notion:
+Use esta estrutura no documento do Drive:
 
 1. **Resumo em cinco linhas:** onde o projeto está e o que vem a seguir.
 2. **Estado do board:** o que foi entregue, o que está em revisão e o que está atrasado.
@@ -65,4 +65,5 @@ Use esta estrutura no Notion:
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.1 | 05/11/2026 | Atualização para o GitHub Projects e o Google Drive, após a saída do Notion. | Ryan Nascimento |
 | 1.0 | 25/10/2026 | Processo e checklist da passagem de liderança, escritos na primeira troca. | João Marcelo Dantas |

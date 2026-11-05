@@ -79,10 +79,11 @@ Medidas adotadas:
 
 ## Fonte e atualização
 
-A fonte da verdade é o formulário no Google Forms, e a descrição completa está no catálogo Docs do Notion ("Formulário da pesquisa com eleitores (rodada 1)"). Esta página foi transcrita em 25/10/2026, e as opções de algumas perguntas estão resumidas.
+A fonte da verdade é o formulário no Google Forms, e a descrição completa está no documento "Formulário da pesquisa com eleitores (rodada 1)", na pasta 03 Pesquisa com eleitores do Drive do grupo. Esta página foi transcrita em 25/10/2026, e as opções de algumas perguntas estão resumidas.
 
 ## Histórico de versões
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.1 | 05/11/2026 | Troca da referência ao Notion pelo documento no Google Drive. | Ryan Nascimento |
 | 1.0 | 25/10/2026 | Transcrição do instrumento da rodada 1, sem respostas, a partir do Notion. | João Marcelo Dantas |

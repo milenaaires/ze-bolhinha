@@ -1,12 +1,12 @@
 # Roteiro e registro de entrevistas
 
-As entrevistas da rodada 1 aprofundam o que o formulário indicou: como as pessoas vivem o problema no dia a dia. Esta página reúne o roteiro, as regras de condução e os critérios de classificação que o grupo usa. Os registros das entrevistas ficam no Notion e não são publicados.
+As entrevistas da rodada 1 aprofundam o que o formulário indicou: como as pessoas vivem o problema no dia a dia. Esta página reúne o roteiro, as regras de condução e os critérios de classificação que o grupo usa. Os registros das entrevistas ficam na pasta restrita do grupo no Google Drive e não são publicados.
 
 O registro adapta o **Template 02 — Registro de entrevista** da Minerva (Fase 1). Os campos de síntese são os mesmos do template, para que a entrega seja só uma cópia para o slide.
 
 ## Como registrar
 
-1. **Antes:** no Notion, duplique o registro modelo e renomeie com o código do entrevistado.
+1. **Antes:** no Drive, copie o modelo de registro (pasta 03 Pesquisa com eleitores) para a pasta RESTRITO › Registro de entrevistas e renomeie a cópia com o código do entrevistado.
 2. **Durante:** siga o roteiro abaixo e anote embaixo de cada bloco.
 3. **Até 24 horas depois:** preencha as propriedades e a seção de síntese, e mude o status para *Registrada*.
 
@@ -15,8 +15,8 @@ O status de cada registro segue o fluxo **Agendada → Realizada → Registrada 
 ## Privacidade
 
 - Nunca registre nome, telefone ou e-mail. O entrevistado é identificado só pelo código.
-- A lista que liga código e contato fica fora do Notion, numa planilha com acesso restrito ao grupo.
-- Peça consentimento no início para anotar ou gravar. Áudios ficam fora do Notion e são apagados ao fim do projeto.
+- A lista que liga código e contato fica numa planilha separada, na pasta RESTRITO do Drive, com acesso só do grupo.
+- Peça consentimento no início para anotar ou gravar. Áudios ficam fora dos documentos do grupo e são apagados ao fim do projeto.
 
 ## Dicas de condução
 
@@ -97,10 +97,11 @@ Os registros também classificam dores, workarounds, fontes de notícia, redes u
 
 ## Fonte e atualização
 
-A fonte da verdade é a página "Pesquisa de campo - Bolhas de informação", no catálogo Docs do Notion. Esta página foi transcrita em 25/10/2026.
+A fonte da verdade é o documento "Pesquisa de campo - Bolhas de informação", na pasta 03 Pesquisa com eleitores do Drive do grupo (antes no catálogo Docs do Notion). Esta página foi transcrita em 25/10/2026.
 
 ## Histórico de versões
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.1 | 05/11/2026 | Atualização das instruções de registro para o Google Drive, após a saída do Notion. | Ryan Nascimento |
 | 1.0 | 25/10/2026 | Transcrição do roteiro, das regras de condução e dos critérios de classificação, sem registros de entrevistas. | João Marcelo Dantas |
