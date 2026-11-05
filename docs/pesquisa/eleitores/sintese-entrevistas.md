@@ -64,6 +64,8 @@ Need statement atual: *"Uma forma de reduzir a manipulação via algoritmo para 
 | Ninguém descreveu o próprio feed como "manipulação". A leitura é de que o feed mostra "o que agrada". | **Matiza** a palavra "manipulação". A persona reconhece personalização, não necessariamente intenção de manipular. |
 | Dois entrevistados veem o problema principalmente em outras pessoas (parentes, quem já concorda). | Levanta uma pergunta sobre **quem é o usuário**: quem sofre a bolha ou quem quer ajudar alguém próximo a sair dela. |
 
+A persona construída a partir desta síntese está em [Persona](persona.md).
+
 ## Pistas para a solução
 
 Estas pistas vieram dos próprios entrevistados e não foram testadas:
@@ -105,4 +107,5 @@ Insumo para a [issue #23](https://github.com/milenaaires/ze-bolhinha/issues/23):
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.1 | 04/11/2026 | Link para a persona. | João Marcelo Dantas |
 | 1.0 | 04/11/2026 | Síntese final das 5 entrevistas da rodada 1, organizada pelas perguntas de persona e comparada ao need statement. | João Marcelo Dantas |

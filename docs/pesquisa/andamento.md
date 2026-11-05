@@ -13,6 +13,7 @@ Este resumo organiza entregas e resultados localizados nos documentos e tarefas 
 | Formulário da pesquisa (rodada 1) | Questionário com perguntas fechadas e algumas abertas, consentimento destacado (LGPD) e convite para entrevista. | Concluído. O instrumento está em [Formulário](eleitores/formulario.md); as respostas não são publicadas. |
 | Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). Os entrevistados foram selecionados pela [metodologia](eleitores/metodologia-selecao.md) escolhida pelo grupo. Foram feitas 5 entrevistas, entre 22/10 e 02/11, e a rodada foi encerrada por limite de cronograma. |
 | Síntese das entrevistas (rodada 1) | Achados das 5 entrevistas organizados pelas perguntas de persona e comparados ao need statement, sem demografia nem posição política. | Concluída. Publicada em [Síntese das entrevistas](eleitores/sintese-entrevistas.md). |
+| Persona | Persona provisória "Alex" (18 a 29 anos), construída com a matriz e a síntese, com infográfico e rastreabilidade de cada traço. | Publicada em [Persona](eleitores/persona.md); falta a validação pelo grupo. |
 | Matriz de direcionadores da persona | Matriz concluída com dados agregados do formulário da rodada 1: idade, canais, confiança, influência e sinais autorrelatados de bolha. | Publicada em [Matriz de direcionadores](eleitores/matriz-persona.md). Região não foi coletada; a síntese das entrevistas pertence a outra task e não bloqueia esta entrega. |
 
 ## Limites e próximos aprofundamentos
@@ -51,6 +52,7 @@ Os links do Notion podem exigir acesso ao workspace do grupo. A atualização do
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.6 | 04/11/2026 | Inclusão da persona. | João Marcelo Dantas |
 | 1.5 | 04/11/2026 | Encerramento da rodada 1 com 5 entrevistas e inclusão da síntese das entrevistas. | João Marcelo Dantas |
 | 1.4 | 02/11/2026 | Inclusão da matriz de persona preenchida com totais agregados do formulário, mantendo os resultados individuais fora do Pages. | Milena Aires |
 | 1.3 | 02/11/2026 | Registro da matriz preliminar da persona e das lacunas da síntese qualitativa. | Milena Aires |

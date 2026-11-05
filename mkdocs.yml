@@ -31,6 +31,14 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/persona.css
 
 nav:
   - Início: index.md
@@ -46,5 +54,6 @@ nav:
       - Roteiro e registro de entrevistas: pesquisa/eleitores/roteiro-entrevista.md
       - Matriz de direcionadores da persona: pesquisa/eleitores/matriz-persona.md
       - Síntese das entrevistas (rodada 1): pesquisa/eleitores/sintese-entrevistas.md
+      - Persona: pesquisa/eleitores/persona.md
   - Andamento: pesquisa/andamento.md
 
