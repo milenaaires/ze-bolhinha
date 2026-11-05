@@ -2,6 +2,8 @@
 
 Este arquivo resume materiais internos relacionados ao projeto para apoiar a migração. Não faz parte do site: o MkDocs publica somente `docs/`.
 
+> **Arquivo histórico.** Em 05/11/2026 o grupo deixou o Notion: as tarefas foram para o GitHub Projects e os documentos para a pasta privada do grupo no Google Drive. Os links do Notion abaixo podem deixar de funcionar.
+
 Fontes consultadas em 13/10/2026:
 
 - [Projeto final — Grupo 1](https://app.notion.com/p/3eb93942393281f39f66c4cd69f6381f)
@@ -66,4 +68,5 @@ Não copiar para o site listas de participantes, respostas de entrevistas, trans
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.2 | 05/11/2026 | Marcação como arquivo histórico após a saída do Notion. | Ryan Nascimento |
 | 1.1 | 13/10/2026 | Organização do contexto consultado no Notion neste repositório. | Milena Aires |

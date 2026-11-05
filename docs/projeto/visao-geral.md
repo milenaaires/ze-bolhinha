@@ -29,14 +29,15 @@ Esse conceito é uma hipótese de solução, não um produto ou funcionalidade j
 
 ## Estado da pesquisa
 
-A imersão e a escolha do conceito estão documentadas. Há tarefas de aprofundamento de mercado, soluções existentes e stakeholders marcadas como concluídas na base do Notion, mas as respectivas descrições de tarefa consultadas registram principalmente o escopo do trabalho, não os resultados detalhados. A página [Andamento e entregas registradas](../pesquisa/andamento.md) separa o que está documentado do que ainda precisa ser trazido para o repositório.
+A imersão e a escolha do conceito estão documentadas. Há tarefas de aprofundamento de mercado, soluções existentes e stakeholders marcadas como concluídas na base de tarefas (hoje no GitHub Projects), mas as respectivas descrições de tarefa consultadas registram principalmente o escopo do trabalho, não os resultados detalhados. A página [Andamento e entregas registradas](../pesquisa/andamento.md) separa o que está documentado do que ainda precisa ser trazido para o repositório.
 
 ## Fontes e atualização
 
-Síntese do projeto e da página [Discovery — Imersão de Inovação](https://app.notion.com/p/3eb93942393281559916e513ee8ea3a6), consultadas em 13/10/2026. O Notion continua sendo a fonte original; este arquivo é atualizado manualmente a partir dos materiais compartilháveis.
+Síntese do projeto e do documento interno "Discovery — Imersão de Inovação", consultados em 13/10/2026. O original fica na pasta privada do grupo no Google Drive; este arquivo é atualizado manualmente a partir dos materiais compartilháveis.
 
 ## Histórico de versões
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.2 | 05/11/2026 | Troca do link do Notion pela referência ao documento interno no Google Drive. | Ryan Nascimento |
 | 1.1 | 13/10/2026 | Organização da síntese do projeto a partir do Notion para publicação no Pages. | Milena Aires |

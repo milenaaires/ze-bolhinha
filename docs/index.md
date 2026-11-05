@@ -19,7 +19,7 @@ A ideia selecionada na imersão combina diagnóstico da bolha informacional com 
 
 ## Atualizações
 
-Os arquivos Markdown versionados em `docs/` são publicados automaticamente pelo GitHub Pages depois de cada envio para `main`. O Notion continua sendo a fonte original e não sincroniza alterações automaticamente com este repositório.
+Os arquivos Markdown versionados em `docs/` são publicados automaticamente pelo GitHub Pages depois de cada envio para `main`. As tarefas ficam no GitHub Projects e os documentos de trabalho, que podem ter dados pessoais, ficam na pasta privada do grupo no Google Drive. O site publica só o que já foi consolidado.
 
 **Atenção:** o site e este repositório são públicos. O site publica `docs/`; os demais arquivos não aparecem no Pages, mas também podem ser vistos no GitHub. Não envie dados pessoais, respostas de pesquisa ou materiais reservados.
 
@@ -27,6 +27,7 @@ Os arquivos Markdown versionados em `docs/` são publicados automaticamente pelo
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.5 | 05/11/2026 | Registro da saída do Notion: tarefas no GitHub Projects e documentos no Google Drive. | Ryan Nascimento |
 | 1.4 | 02/11/2026 | Inclusão da matriz de direcionadores da persona para a pesquisa com eleitores. | Milena Aires |
 | 1.3 | 25/10/2026 | Inclusão das páginas de organização do trabalho, passagem de liderança e pesquisa com eleitores. | João Marcelo Dantas |
 | 1.2 | 13/10/2026 | Inclusão dos conteúdos de deep dive extraídos do Notion no Pages. | Milena Aires |
