@@ -48,7 +48,7 @@ Os resultados oferecem pistas iniciais para as perguntas da imersão, com limite
 - Verificar, em ambiente restrito, a elegibilidade adulta e a consistência das respostas de idade; o resumo do formulário não permite vincular respostas.
 - Qualquer cruzamento futuro de respostas deve ser feito somente na base restrita, com revisão de privacidade antes de publicar resultados agregados.
 - Manter região como lacuna nesta rodada e validar a leitura dos resultados do formulário com o grupo.
-- A síntese qualitativa das entrevistas segue em uma task separada e não bloqueia a conclusão desta matriz.
+- A síntese qualitativa das entrevistas está em [Síntese das entrevistas (rodada 1)](sintese-entrevistas.md), e a persona resultante, em [Persona](persona.md).
 
 ## Fontes
 
@@ -62,6 +62,7 @@ Os resultados oferecem pistas iniciais para as perguntas da imersão, com limite
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.4 | 04/11/2026 | Links para a síntese das entrevistas e para a persona nos próximos passos. | João Marcelo Dantas |
 | 1.3 | 03/11/2026 | Ajuste de escopo: matriz restrita ao formulário; síntese de entrevistas indicada como task separada. | Milena Aires |
 | 1.2 | 02/11/2026 | Separação entre totais do formulário e cobertura da amostra selecionada; distinção de fontes confiáveis e referências de opinião. | Milena Aires |
 | 1.1 | 02/11/2026 | Preenchimento da matriz com resultados agregados do formulário e registro de limites de elegibilidade, região e síntese qualitativa. | Milena Aires |

@@ -11,7 +11,9 @@ Este resumo organiza entregas e resultados localizados nos documentos e tarefas 
 | Deep dive (Sessão 5) | Fundamentos, stakeholders, soluções existentes, dados de mercado e matriz exploratória de lacunas. | Conteúdo extraído do Notion e organizado em [Deep dive](deep-dive.md); algumas fontes, avaliações e números permanecem pendentes de validação. |
 | Prototipação | O registro prevê um aplicativo digital com diagnóstico e mascote. | O protótipo ainda não aparece documentado como concluído. |
 | Formulário da pesquisa (rodada 1) | Questionário com perguntas fechadas e algumas abertas, consentimento destacado (LGPD) e convite para entrevista. | Concluído. O instrumento está em [Formulário](eleitores/formulario.md); as respostas não são publicadas. |
-| Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). Os entrevistados foram selecionados pela [metodologia](eleitores/metodologia-selecao.md) escolhida pelo grupo, e as entrevistas começaram em 22/10. |
+| Entrevistas (rodada 1) | Roteiro de cerca de 20 minutos, regras de condução e critérios comuns de classificação. A meta passou de 15 entrevistas, prevista no plano, para 10 (duas por integrante). | Roteiro em [Roteiro e registro de entrevistas](eleitores/roteiro-entrevista.md). Os entrevistados foram selecionados pela [metodologia](eleitores/metodologia-selecao.md) escolhida pelo grupo. Foram feitas 5 entrevistas, entre 22/10 e 02/11, e a rodada foi encerrada por limite de cronograma. |
+| Síntese das entrevistas (rodada 1) | Achados das 5 entrevistas organizados pelas perguntas de persona e comparados ao need statement, sem demografia nem posição política. | Concluída. Publicada em [Síntese das entrevistas](eleitores/sintese-entrevistas.md). |
+| Persona | Persona provisória "Alex" (18 a 29 anos), construída com a matriz e a síntese, com infográfico e rastreabilidade de cada traço. | Publicada em [Persona](eleitores/persona.md); falta a validação pelo grupo. |
 | Matriz de direcionadores da persona | Matriz concluída com dados agregados do formulário da rodada 1: idade, canais, confiança, influência e sinais autorrelatados de bolha. | Publicada em [Matriz de direcionadores](eleitores/matriz-persona.md). Região não foi coletada; a síntese das entrevistas pertence a outra task e não bloqueia esta entrega. |
 
 ## Limites e próximos aprofundamentos
@@ -27,11 +29,9 @@ O artefato da Sessão 5 oferece mais conteúdo do que as descrições das tarefa
 
 ## Pesquisa com eleitores e privacidade
 
-A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. O formulário recebeu 107 respostas, e 41 pessoas aceitaram ser entrevistadas. O registro padronizado das entrevistas está pronto e em uso no Notion. Não foram incluídos neste site listas de participantes, respostas, transcrições ou citações de entrevistas.
+A primeira rodada foi planejada para explorar se o problema priorizado aparece na experiência das pessoas. O formulário recebeu 107 respostas, e 41 pessoas aceitaram ser entrevistadas. Foram feitas 5 entrevistas, registradas no Notion. Este site não inclui listas de participantes, respostas nem transcrições. A [síntese das entrevistas](eleitores/sintese-entrevistas.md) publica só achados agregados e trechos curtos sem identificar quem falou, e passou por revisão de privacidade antes da publicação. O repositório e o Pages são públicos.
 
-Quando a síntese estiver pronta, registre somente achados agregados e revise qualquer trecho que possa identificar alguém, direta ou indiretamente, antes de publicar. O repositório e o Pages são públicos.
-
-A [matriz da persona](eleitores/matriz-persona.md) registra exclusivamente os resultados agregados do formulário e está concluída para o escopo da issue #20. A síntese das entrevistas é acompanhada em uma task separada. O resumo foi preparado sem publicar respostas individuais nem os campos de contato.
+A [matriz da persona](eleitores/matriz-persona.md) registra exclusivamente os resultados agregados do formulário e está concluída para o escopo da issue #20. A síntese das entrevistas foi feita na issue #21. O resumo foi preparado sem publicar respostas individuais nem os campos de contato.
 
 ## Fontes no Notion
 
@@ -52,6 +52,8 @@ Os links do Notion podem exigir acesso ao workspace do grupo. A atualização do
 
 | Versão | Data | Alteração | Responsável pela edição |
 |---|---|---|---|
+| 1.6 | 04/11/2026 | Inclusão da persona. | João Marcelo Dantas |
+| 1.5 | 04/11/2026 | Encerramento da rodada 1 com 5 entrevistas e inclusão da síntese das entrevistas. | João Marcelo Dantas |
 | 1.4 | 02/11/2026 | Inclusão da matriz de persona preenchida com totais agregados do formulário, mantendo os resultados individuais fora do Pages. | Milena Aires |
 | 1.3 | 02/11/2026 | Registro da matriz preliminar da persona e das lacunas da síntese qualitativa. | Milena Aires |
 | 1.2 | 25/10/2026 | Inclusão do formulário e do roteiro de entrevistas da rodada 1 e atualização do estado da pesquisa com eleitores na troca de liderança. | João Marcelo Dantas |
