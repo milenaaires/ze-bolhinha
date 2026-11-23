@@ -2,7 +2,11 @@
 
 Repositório do projeto final do Grupo 1. Este espaço guarda a documentação versionada e publica os arquivos Markdown de `docs/` no GitHub Pages.
 
-**Visibilidade:** ao tornar este repositório público, todos os arquivos e o histórico de commits ficam acessíveis na internet. O Pages publica apenas `docs/`; isso não torna `interno/` privado.
+**Visibilidade:** ao tornar este repositório público, todos os arquivos e o histórico de commits ficam acessíveis na internet. O Pages publica `docs/` e o jogo `prototipo/bolha-eleitoral/` (em `/jogo/`); isso não torna `interno/` privado.
+
+## Jogo Bolha Eleitoral
+
+Protótipo jogável para 5 pessoas no mesmo computador: [milenaaires.github.io/ze-bolhinha/jogo/](https://milenaaires.github.io/ze-bolhinha/jogo/). Código, regras e balanceamento em [`prototipo/bolha-eleitoral/`](prototipo/bolha-eleitoral/).
 
 ## Adicionar ou atualizar documentos
 

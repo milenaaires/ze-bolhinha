@@ -8,6 +8,7 @@ on:
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/pages.yml'
+      - 'prototipo/bolha-eleitoral/**'
   workflow_dispatch:
 
 permissions:
@@ -33,6 +34,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Construir site
         run: mkdocs build --strict
+      - name: Incluir o jogo Bolha Eleitoral em /jogo/
+        run: |
+          mkdir -p site/jogo
+          cp -r prototipo/bolha-eleitoral/index.html prototipo/bolha-eleitoral/css prototipo/bolha-eleitoral/js site/jogo/
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
       - name: Enviar artefato
