@@ -1,6 +1,5 @@
 // Regras da partida do telefone sem fio da desinformação.
 // Funções puras: recebem o estado da partida e devolvem um estado novo, sem tocar na tela.
-// Funciona como <script> comum no navegador (global JogoLogica) e com require() no Node.
 (function (raiz) {
   'use strict';
 
@@ -15,7 +14,6 @@
     return lista[Math.floor(aleatorio() * lista.length)];
   }
 
-  // Sorteia uma técnica que ainda não está na mão, para que o jogador sempre tenha escolhas diferentes.
   function comprarCarta(mao, tecnicas, aleatorio) {
     const disponiveis = tecnicas.map((t) => t.id).filter((id) => !mao.includes(id));
     return sortear(disponiveis, aleatorio);
@@ -28,6 +26,10 @@
     }
     if (limpos.some((nome) => nome === '')) {
       throw new Error('Todo jogador precisa de um nome.');
+    }
+    // Os jogadores são chamados pelo nome na passagem e no placar, então nomes iguais confundiriam a partida.
+    if (new Set(limpos.map((nome) => nome.toLocaleLowerCase('pt-BR'))).size !== limpos.length) {
+      throw new Error('Cada jogador precisa de um nome diferente.');
     }
     if (tecnicas.length <= TAMANHO_MAO) {
       throw new Error('O baralho precisa de mais técnicas do que cartas na mão.');
@@ -69,14 +71,17 @@
     return estado.versoes.length >= estado.totalTurnos;
   }
 
-  // Cada jogador só vê a versão imediatamente anterior; no primeiro turno, a original.
+  function ultimaVersao(estado) {
+    return estado.versoes.at(-1);
+  }
+
   function versaoVisivel(estado) {
-    const ultima = estado.versoes[estado.versoes.length - 1];
+    const ultima = ultimaVersao(estado);
     return ultima ? ultima.texto : estado.noticia.texto;
   }
 
   function alcanceAtual(estado) {
-    const ultima = estado.versoes[estado.versoes.length - 1];
+    const ultima = ultimaVersao(estado);
     return ultima ? ultima.alcance : ALCANCE_INICIAL;
   }
 
@@ -128,9 +133,7 @@
       .sort((a, b) => b.engajamento - a.engajamento);
 
     const maximo = placar.length ? placar[0].engajamento : 0;
-    const vencedores = estado.jogadores
-      .map((j) => j.nome)
-      .filter((nome) => placar.find((p) => p.nome === nome).engajamento === maximo);
+    const vencedores = placar.filter((p) => p.engajamento === maximo).map((p) => p.nome);
 
     const revelacao = {
       original: estado.noticia.texto,
@@ -148,6 +151,8 @@
     MIN_JOGADORES,
     MAX_JOGADORES,
     VOLTAS,
+    sortear,
+    buscarTecnica,
     criarPartida,
     jogadorDaVez,
     maoDaVez,

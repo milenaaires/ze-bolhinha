@@ -64,6 +64,11 @@ test('a partida rejeita menos de 3 ou mais de 6 jogadores e nomes em branco', ()
   assert.throws(() => novaPartida(['Ana', '   ', 'Caio']), /nome/i);
 });
 
+test('a partida rejeita nomes repetidos, mesmo com maiúsculas ou espaços diferentes', () => {
+  assert.throws(() => novaPartida(['Ana', 'Bia', 'Ana']), /nome diferente/);
+  assert.throws(() => novaPartida(['Ana', 'Bia', ' ana ']), /nome diferente/);
+});
+
 test('no primeiro turno a versão visível é o texto original', () => {
   const estado = novaPartida(['Ana', 'Bia', 'Caio']);
   assert.equal(Jogo.versaoVisivel(estado), NOTICIA_SEM_ORIGEM.texto);
