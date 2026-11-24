@@ -66,10 +66,9 @@
   }
   main { max-width: 52rem; margin: 0 auto; display: grid; gap: 1.75rem; }
 
-  h1, h2, h3 { font-family: var(--fonte-manchete); font-weight: 700; line-height: 1.1; margin: 0; text-wrap: balance; }
+  h1, h2 { font-family: var(--fonte-manchete); font-weight: 700; line-height: 1.1; margin: 0; text-wrap: balance; }
   h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); letter-spacing: -0.01em; }
   h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
-  h3 { font-size: 1.35rem; }
   p { margin: 0; max-width: 65ch; }
 
   .cartola {
@@ -124,7 +123,6 @@
     font-weight: 600;
   }
 
-  /* A notícia como recorte de agência */
   .recorte {
     background: var(--folha);
     border: 1px solid var(--fio);
@@ -137,14 +135,12 @@
   }
   .recorte .texto { font-size: 1.3rem; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
 
-  /* Tela de passagem */
   .passagem { min-height: 60vh; display: grid; place-content: center; text-align: center; gap: 1.25rem; }
   .passagem .nome { font-family: var(--fonte-manchete); font-size: clamp(3rem, 10vw, 5.5rem); line-height: 1; overflow-wrap: anywhere; }
   .passagem .acoes { justify-content: center; }
 
   .cabecalho { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; border-bottom: 2px solid var(--tinta); padding-bottom: 0.6rem; }
 
-  /* Cartas de técnica: seleção exclusiva, marcada por borda e por texto */
   .cartas { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.85rem; border: 0; padding: 0; margin: 0; min-width: 0; }
   .cartas legend { font-family: var(--fonte-manchete); font-weight: 700; font-size: 1.35rem; margin-bottom: 0.6rem; padding: 0; }
   .carta {
@@ -167,7 +163,6 @@
   .carta:has(input:checked) .escolhida { visibility: visible; }
   .carta:has(input:focus-visible) { outline: 3px solid var(--plantao); outline-offset: 3px; }
 
-  /* Revelação */
   .comparacao { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
   .recorte.final { border-top-color: var(--plantao); }
   .linha-do-tempo { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
@@ -224,11 +219,12 @@
   const app = document.getElementById('app');
   const formatar = new Intl.NumberFormat('pt-BR');
 
-  // Estado da interface. A partida em si fica em `estado`, regida pela lógica.
+  const rascunhoVazio = () => ({ cartaId: null, texto: '' });
+
   let tela = 'cadastro';
   let nomes = ['', '', ''];
   let estado = null;
-  let rascunho = { cartaId: null, texto: '' };
+  let rascunho = rascunhoVazio();
   let aviso = '';
 
   // Cria elementos sempre com textContent, para que o texto digitado apareça literalmente.
@@ -260,13 +256,9 @@
   }
 
   function desenhar() {
-    if (tela === 'cadastro') return desenharCadastro();
-    if (tela === 'passagem') return desenharPassagem();
-    if (tela === 'turno') return desenharTurno();
-    return desenharRevelacao();
+    telas[tela]();
   }
 
-  // ---------- Cadastro ----------
   function desenharCadastro() {
     const campos = nomes.map((nome, i) =>
       el('div', { class: 'nome-linha' },
@@ -281,7 +273,7 @@
       ));
 
     mostrar(
-      el('p', { class: 'cartola', texto: 'Redação aberta · 3 a 6 jogadores · um computador' }),
+      el('p', { class: 'cartola', texto: `Redação aberta · ${Jogo.MIN_JOGADORES} a ${Jogo.MAX_JOGADORES} jogadores · um computador` }),
       el('h1', { texto: 'Quem Conta um Conto' }),
       el('div', { class: 'bloco' },
         el('p', { texto: 'Uma notícia pequena vai passar de mão em mão. Vocês são a redação.' }),
@@ -310,7 +302,7 @@
   }
 
   function comecar() {
-    const noticia = noticias[Math.floor(Math.random() * noticias.length)];
+    const noticia = Jogo.sortear(noticias, Math.random);
     try {
       estado = Jogo.criarPartida({ nomes, tecnicas, noticia });
     } catch (erro) {
@@ -318,11 +310,10 @@
       desenhar();
       return;
     }
-    rascunho = { cartaId: null, texto: '' };
+    rascunho = rascunhoVazio();
     irPara('passagem');
   }
 
-  // ---------- Passagem ----------
   function desenharPassagem() {
     if (Jogo.partidaTerminou(estado)) {
       mostrar(el('section', { class: 'passagem' },
@@ -342,14 +333,13 @@
     ));
   }
 
-  // ---------- Turno ----------
   function desenharTurno() {
     const jogador = Jogo.jogadorDaVez(estado);
     const numeroTurno = estado.versoes.length + 1;
     const primeiro = estado.versoes.length === 0;
 
     const cartas = Jogo.maoDaVez(estado).map((id) => {
-      const t = tecnicas.find((x) => x.id === id);
+      const t = Jogo.buscarTecnica(estado, id);
       return el('label', { class: 'carta' },
         el('input', {
           type: 'radio', name: 'carta', value: t.id, id: `carta-${t.id}`,
@@ -413,24 +403,25 @@
       desenhar();
       return;
     }
-    rascunho = { cartaId: null, texto: '' };
+    rascunho = rascunhoVazio();
     irPara('passagem');
   }
 
-  // ---------- Revelação ----------
   function desenharRevelacao() {
     const r = Jogo.montarRevelacao(estado);
     const maior = Math.max(...r.serieAlcance);
+    const inicio = formatar.format(r.serieAlcance[0]);
+    const fim = formatar.format(r.serieAlcance.at(-1));
 
     const grafico = el('div', { class: 'grafico-rolagem' },
-      el('div', { class: 'grafico', role: 'img', 'aria-label': `Alcance da notícia, de ${formatar.format(r.serieAlcance[0])} para ${formatar.format(r.serieAlcance[r.serieAlcance.length - 1])} pessoas` },
+      el('div', { class: 'grafico', role: 'img', 'aria-label': `Alcance da notícia, de ${inicio} para ${fim} pessoas` },
         r.serieAlcance.map((alcance, i) => {
-          const barra = el('div', { class: i === 0 ? 'barra original' : 'barra' },
+          const coluna = el('span', { class: 'coluna' });
+          coluna.style.height = `${(alcance / maior) * 100}%`;
+          return el('div', { class: i === 0 ? 'barra original' : 'barra' },
             el('span', { class: 'valor', texto: formatar.format(alcance) }),
-            el('span', { class: 'coluna' }),
+            coluna,
           );
-          barra.lastChild.style.height = `${(alcance / maior) * 100}%`;
-          return barra;
         }),
       ),
       el('div', { class: 'rotulos', 'aria-hidden': 'true' },
@@ -467,7 +458,7 @@
 
       el('section', { class: 'bloco' },
         el('h2', { texto: 'Quantas pessoas a notícia alcançou' }),
-        el('p', { class: 'suave', texto: `Começou com ${formatar.format(r.serieAlcance[0])} leitores e chegou a ${formatar.format(r.serieAlcance[r.serieAlcance.length - 1])}.` }),
+        el('p', { class: 'suave', texto: `Começou com ${inicio} leitores e chegou a ${fim}.` }),
         grafico,
       ),
 
@@ -498,9 +489,16 @@
     );
   }
 
+  const telas = {
+    cadastro: desenharCadastro,
+    passagem: desenharPassagem,
+    turno: desenharTurno,
+    revelacao: desenharRevelacao,
+  };
+
   // Mantém a partida quando a página publicada é atualizada com alguém jogando.
   function iniciar(salvo) {
-    if (salvo && salvo.tela) {
+    if (salvo && salvo.tela in telas) {
       tela = salvo.tela;
       nomes = salvo.nomes || nomes;
       rascunho = salvo.rascunho || rascunho;

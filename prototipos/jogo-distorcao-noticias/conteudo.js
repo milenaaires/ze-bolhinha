@@ -1,11 +1,9 @@
 // Cartas de técnica de distorção e banco de notícias de partida.
 // As notícias são fictícias. Algumas transplantam para o Brasil um fato real de outro país ou época;
 // essas trazem a origem verdadeira, conferida em fonte aberta, para a revelação no fim da partida.
-// Funciona como <script> comum no navegador (global JogoConteudo) e com require() no Node.
 (function (raiz) {
   'use strict';
 
-  // Quanto mais apelativa a técnica, mais engajamento ela rende para o algoritmo.
   const tecnicas = [
     {
       id: 'omissao',
