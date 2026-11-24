@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quem Conta um Conto</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+  /* Layout: uma coluna de redação. Cada tela é uma pauta; a notícia aparece como recorte de agência. */
+  :root {
+    --papel: #eef1f4;
+    --folha: #ffffff;
+    --tinta: #141920;
+    --tinta-suave: #4d5866;
+    --fio: #c9d1db;
+    --plantao: #c41d3a;
+    --plantao-texto: #ffffff;
+    --marca-texto: #ffe14d;
+    --marca-tinta: #141920;
+    --fonte-manchete: "Archivo Narrow", "Arial Narrow", "Roboto Condensed", sans-serif;
+    --fonte-texto: "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --fonte-agencia: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --papel: #0f1318;
+      --folha: #19202a;
+      --tinta: #e8edf3;
+      --tinta-suave: #a3afbd;
+      --fio: #2e3846;
+      --plantao: #ff5a6e;
+      --plantao-texto: #12161c;
+      --marca-texto: #e9c93a;
+      --marca-tinta: #12161c;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --papel: #0f1318;
+    --folha: #19202a;
+    --tinta: #e8edf3;
+    --tinta-suave: #a3afbd;
+    --fio: #2e3846;
+    --plantao: #ff5a6e;
+    --plantao-texto: #12161c;
+    --marca-texto: #e9c93a;
+    --marca-tinta: #12161c;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--fonte-texto);
+    font-size: 1.125rem;
+    line-height: 1.55;
+    padding-block: 1.5rem 3rem;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  main { max-width: 52rem; margin: 0 auto; display: grid; gap: 1.75rem; }
+
+  h1, h2, h3 { font-family: var(--fonte-manchete); font-weight: 700; line-height: 1.1; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); letter-spacing: -0.01em; }
+  h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+  h3 { font-size: 1.35rem; }
+  p { margin: 0; max-width: 65ch; }
+
+  .cartola {
+    font-family: var(--fonte-agencia);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--plantao);
+  }
+  .bloco { display: grid; gap: 0.85rem; }
+  .suave { color: var(--tinta-suave); }
+
+  .regras { display: grid; gap: 0.4rem; padding-left: 1.2rem; margin: 0; max-width: 65ch; }
+
+  .nomes { display: grid; gap: 0.6rem; }
+  .nome-linha { display: flex; gap: 0.5rem; align-items: center; }
+  .nome-linha label { font-family: var(--fonte-agencia); font-size: 0.85rem; min-width: 5.5rem; color: var(--tinta-suave); }
+  input[type="text"], textarea {
+    font: inherit;
+    color: var(--tinta);
+    background: var(--folha);
+    border: 2px solid var(--fio);
+    border-radius: 6px;
+    padding: 0.55rem 0.75rem;
+    width: 100%;
+    min-width: 0;
+  }
+  textarea { min-height: 9rem; resize: vertical; }
+
+  button {
+    font: inherit;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.7rem 1.3rem;
+    cursor: pointer;
+    border: 2px solid var(--tinta);
+    background: transparent;
+    color: var(--tinta);
+  }
+  button.principal { background: var(--plantao); border-color: var(--plantao); color: var(--plantao-texto); font-size: 1.2rem; }
+  button.discreto { border-color: var(--fio); color: var(--tinta-suave); padding: 0.45rem 0.8rem; font-size: 0.95rem; }
+  button:disabled { opacity: 0.45; cursor: not-allowed; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+
+  :focus-visible { outline: 3px solid var(--plantao); outline-offset: 3px; }
+
+  .aviso {
+    border-left: 6px solid var(--plantao);
+    background: var(--folha);
+    padding: 0.6rem 0.9rem;
+    font-weight: 600;
+  }
+
+  /* A notícia como recorte de agência */
+  .recorte {
+    background: var(--folha);
+    border: 1px solid var(--fio);
+    border-top: 6px solid var(--tinta);
+    padding: 1rem 1.2rem 1.2rem;
+    display: grid;
+    align-content: start;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .recorte .texto { font-size: 1.3rem; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+  /* Tela de passagem */
+  .passagem { min-height: 60vh; display: grid; place-content: center; text-align: center; gap: 1.25rem; }
+  .passagem .nome { font-family: var(--fonte-manchete); font-size: clamp(3rem, 10vw, 5.5rem); line-height: 1; overflow-wrap: anywhere; }
+  .passagem .acoes { justify-content: center; }
+
+  .cabecalho { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem; border-bottom: 2px solid var(--tinta); padding-bottom: 0.6rem; }
+
+  /* Cartas de técnica: seleção exclusiva, marcada por borda e por texto */
+  .cartas { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.85rem; border: 0; padding: 0; margin: 0; min-width: 0; }
+  .cartas legend { font-family: var(--fonte-manchete); font-weight: 700; font-size: 1.35rem; margin-bottom: 0.6rem; padding: 0; }
+  .carta {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.4rem;
+    background: var(--folha);
+    border: 2px solid var(--fio);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+  }
+  .carta input { position: absolute; opacity: 0; pointer-events: none; }
+  .carta .nome-carta { font-family: var(--fonte-manchete); font-weight: 700; font-size: 1.3rem; line-height: 1.15; }
+  .carta .instrucao { font-size: 0.98rem; color: var(--tinta-suave); }
+  .carta .valor { font-family: var(--fonte-agencia); font-weight: 600; font-size: 1rem; }
+  .carta .escolhida { font-family: var(--fonte-agencia); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--plantao); visibility: hidden; }
+  .carta:has(input:checked) { border-color: var(--plantao); border-width: 4px; padding: calc(0.9rem - 2px) calc(1rem - 2px); }
+  .carta:has(input:checked) .escolhida { visibility: visible; }
+  .carta:has(input:focus-visible) { outline: 3px solid var(--plantao); outline-offset: 3px; }
+
+  /* Revelação */
+  .comparacao { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .recorte.final { border-top-color: var(--plantao); }
+  .linha-do-tempo { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .linha-do-tempo li { background: var(--folha); border: 1px solid var(--fio); border-radius: 6px; padding: 0.7rem 0.9rem; display: grid; gap: 0.3rem; min-width: 0; }
+  .linha-do-tempo .meta { font-family: var(--fonte-agencia); font-size: 0.85rem; color: var(--tinta-suave); }
+  .linha-do-tempo .meta strong { color: var(--tinta); }
+  .linha-do-tempo .texto { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+  .grafico-rolagem { overflow-x: auto; }
+  .grafico {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(3.6rem, 1fr);
+    align-items: end;
+    gap: 0.4rem;
+    height: 17rem;
+    min-width: max-content;
+    border-bottom: 2px solid var(--tinta);
+    padding-top: 0.5rem;
+  }
+  .barra { display: grid; grid-template-rows: auto 1fr; height: 100%; align-items: end; text-align: center; gap: 0.25rem; }
+  .barra .valor { font-family: var(--fonte-agencia); font-size: 0.72rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .barra .coluna { background: var(--plantao); border-radius: 3px 3px 0 0; min-height: 4px; width: 100%; align-self: end; }
+  .barra.original .coluna { background: var(--tinta-suave); }
+  .rotulos { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(3.6rem, 1fr); gap: 0.4rem; min-width: max-content; }
+  .rotulos span { text-align: center; font-family: var(--fonte-agencia); font-size: 0.75rem; color: var(--tinta-suave); }
+
+  .placar { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; max-width: 30rem; }
+  .placar li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--fio); padding-bottom: 0.3rem; font-variant-numeric: tabular-nums; }
+  .destaque { background: var(--marca-texto); color: var(--marca-tinta); padding: 0 0.25em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+  .origem { background: var(--folha); border: 2px dashed var(--tinta); border-radius: 8px; padding: 1rem 1.2rem; display: grid; gap: 0.6rem; }
+  .origem a { color: var(--plantao); font-weight: 600; }
+
+  .perguntas { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.6rem; font-size: 1.3rem; font-family: var(--fonte-manchete); font-weight: 700; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .tela { animation: entrar 180ms ease-out; }
+    @keyframes entrar { from { opacity: 0.6; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+<main id="app" aria-live="polite"></main>
+
+<script src="conteudo.js"></script>
+<script src="logica.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  const Jogo = window.JogoLogica;
+  const { tecnicas, noticias } = window.JogoConteudo;
+  const app = document.getElementById('app');
+  const formatar = new Intl.NumberFormat('pt-BR');
+
+  // Estado da interface. A partida em si fica em `estado`, regida pela lógica.
+  let tela = 'cadastro';
+  let nomes = ['', '', ''];
+  let estado = null;
+  let rascunho = { cartaId: null, texto: '' };
+  let aviso = '';
+
+  // Cria elementos sempre com textContent, para que o texto digitado apareça literalmente.
+  function el(tag, props, ...filhos) {
+    const no = document.createElement(tag);
+    for (const [chave, valor] of Object.entries(props || {})) {
+      if (valor === undefined || valor === null || valor === false) continue;
+      if (chave === 'class') no.className = valor;
+      else if (chave === 'texto') no.textContent = valor;
+      else if (chave.startsWith('on')) no.addEventListener(chave.slice(2), valor);
+      else no.setAttribute(chave, valor === true ? '' : valor);
+    }
+    for (const filho of filhos.flat()) {
+      if (filho === null || filho === undefined || filho === false) continue;
+      no.append(filho instanceof Node ? filho : document.createTextNode(String(filho)));
+    }
+    return no;
+  }
+
+  function mostrar(...conteudo) {
+    app.replaceChildren(el('div', { class: 'tela bloco' }, ...conteudo));
+    window.scrollTo(0, 0);
+  }
+
+  function irPara(novaTela) {
+    tela = novaTela;
+    aviso = '';
+    desenhar();
+  }
+
+  function desenhar() {
+    if (tela === 'cadastro') return desenharCadastro();
+    if (tela === 'passagem') return desenharPassagem();
+    if (tela === 'turno') return desenharTurno();
+    return desenharRevelacao();
+  }
+
+  // ---------- Cadastro ----------
+  function desenharCadastro() {
+    const campos = nomes.map((nome, i) =>
+      el('div', { class: 'nome-linha' },
+        el('label', { for: `nome-${i}`, texto: `Jogador ${i + 1}` }),
+        el('input', {
+          type: 'text', id: `nome-${i}`, value: nome, autocomplete: 'off', maxlength: '30',
+          oninput: (e) => { nomes[i] = e.target.value; },
+        }),
+        nomes.length > Jogo.MIN_JOGADORES
+          ? el('button', { type: 'button', class: 'discreto', 'aria-label': `Remover jogador ${i + 1}`, texto: 'Remover', onclick: () => { nomes.splice(i, 1); desenhar(); } })
+          : null,
+      ));
+
+    mostrar(
+      el('p', { class: 'cartola', texto: 'Redação aberta · 3 a 6 jogadores · um computador' }),
+      el('h1', { texto: 'Quem Conta um Conto' }),
+      el('div', { class: 'bloco' },
+        el('p', { texto: 'Uma notícia pequena vai passar de mão em mão. Vocês são a redação.' }),
+        el('ul', { class: 'regras' },
+          el('li', { texto: 'Na sua vez, você vê só a versão que o jogador anterior escreveu.' }),
+          el('li', { texto: 'Escolha uma das suas 3 cartas de técnica e reescreva a notícia usando aquela técnica.' }),
+          el('li', { texto: 'O número em cada carta é o engajamento que ela rende. Vence quem somar mais.' }),
+          el('li', { texto: 'São duas voltas. No fim, todos veem o que aconteceu com a notícia.' }),
+        ),
+      ),
+      el('form', {
+        class: 'bloco',
+        onsubmit: (e) => { e.preventDefault(); comecar(); },
+      },
+        el('h2', { texto: 'Quem joga, em ordem' }),
+        el('div', { class: 'nomes' }, campos),
+        aviso ? el('p', { class: 'aviso', role: 'alert', texto: aviso }) : null,
+        el('div', { class: 'acoes' },
+          nomes.length < Jogo.MAX_JOGADORES
+            ? el('button', { type: 'button', texto: '+ Adicionar jogador', onclick: () => { nomes.push(''); desenhar(); document.getElementById(`nome-${nomes.length - 1}`).focus(); } })
+            : null,
+          el('button', { type: 'submit', class: 'principal', texto: 'Começar' }),
+        ),
+      ),
+    );
+  }
+
+  function comecar() {
+    const noticia = noticias[Math.floor(Math.random() * noticias.length)];
+    try {
+      estado = Jogo.criarPartida({ nomes, tecnicas, noticia });
+    } catch (erro) {
+      aviso = erro.message;
+      desenhar();
+      return;
+    }
+    rascunho = { cartaId: null, texto: '' };
+    irPara('passagem');
+  }
+
+  // ---------- Passagem ----------
+  function desenharPassagem() {
+    if (Jogo.partidaTerminou(estado)) {
+      mostrar(el('section', { class: 'passagem' },
+        el('p', { class: 'cartola', texto: 'Fim das duas voltas' }),
+        el('p', { class: 'nome', texto: 'Chamem todo mundo' }),
+        el('p', { class: 'suave', texto: 'A notícia passou por todas as mãos. Agora todos podem olhar a tela.' }),
+        el('div', { class: 'acoes' }, el('button', { type: 'button', class: 'principal', texto: 'Ver a revelação', onclick: () => irPara('revelacao') })),
+      ));
+      return;
+    }
+    const jogador = Jogo.jogadorDaVez(estado);
+    mostrar(el('section', { class: 'passagem' },
+      el('p', { class: 'cartola', texto: 'Passe o computador para' }),
+      el('p', { class: 'nome', texto: jogador.nome }),
+      el('p', { class: 'suave', texto: 'Os demais, desviem o olhar até a próxima passagem.' }),
+      el('div', { class: 'acoes' }, el('button', { type: 'button', class: 'principal', texto: `Sou eu, ${jogador.nome}`, onclick: () => irPara('turno') })),
+    ));
+  }
+
+  // ---------- Turno ----------
+  function desenharTurno() {
+    const jogador = Jogo.jogadorDaVez(estado);
+    const numeroTurno = estado.versoes.length + 1;
+    const primeiro = estado.versoes.length === 0;
+
+    const cartas = Jogo.maoDaVez(estado).map((id) => {
+      const t = tecnicas.find((x) => x.id === id);
+      return el('label', { class: 'carta' },
+        el('input', {
+          type: 'radio', name: 'carta', value: t.id, id: `carta-${t.id}`,
+          checked: rascunho.cartaId === t.id,
+          onchange: () => { rascunho.cartaId = t.id; },
+        }),
+        el('span', { class: 'nome-carta', texto: t.nome }),
+        el('span', { class: 'instrucao', texto: t.instrucao }),
+        el('span', { class: 'valor', texto: `+${t.valor} engajamento` }),
+        el('span', { class: 'escolhida', texto: '✓ Carta escolhida' }),
+      );
+    });
+
+    const caixa = el('textarea', {
+      id: 'texto', name: 'texto', rows: '6',
+      placeholder: 'Reescreva a notícia aqui, usando a técnica da carta.',
+      oninput: (e) => { rascunho.texto = e.target.value; },
+    });
+    caixa.value = rascunho.texto;
+
+    mostrar(
+      el('div', { class: 'cabecalho' },
+        el('h2', { texto: jogador.nome }),
+        el('p', { class: 'cartola', texto: `Volta ${Jogo.voltaAtual(estado)} de ${Jogo.VOLTAS} · turno ${numeroTurno} de ${estado.totalTurnos}` }),
+      ),
+      el('article', { class: 'recorte' },
+        el('p', { class: 'cartola', texto: primeiro ? 'A notícia original' : 'A versão que chegou até você' }),
+        el('p', { class: 'texto', texto: Jogo.versaoVisivel(estado) }),
+      ),
+      el('form', { class: 'bloco', onsubmit: (e) => { e.preventDefault(); publicar(); } },
+        el('fieldset', { class: 'cartas' },
+          el('legend', { texto: 'Escolha uma técnica' }),
+          cartas,
+        ),
+        el('label', { for: 'texto', class: 'bloco' },
+          el('span', { class: 'cartola', texto: 'Sua versão da notícia' }),
+        ),
+        caixa,
+        aviso ? el('p', { class: 'aviso', role: 'alert', texto: aviso }) : null,
+        el('div', { class: 'acoes' }, el('button', { type: 'submit', class: 'principal', texto: 'Publicar' })),
+      ),
+    );
+  }
+
+  function publicar() {
+    if (!rascunho.cartaId) {
+      aviso = 'Escolha uma carta antes de publicar.';
+      desenhar();
+      return;
+    }
+    if (rascunho.texto.trim() === '') {
+      aviso = 'Escreva a sua versão da notícia antes de publicar.';
+      desenhar();
+      document.getElementById('texto').focus();
+      return;
+    }
+    try {
+      estado = Jogo.jogarTurno(estado, { tecnicaId: rascunho.cartaId, texto: rascunho.texto });
+    } catch (erro) {
+      aviso = erro.message;
+      desenhar();
+      return;
+    }
+    rascunho = { cartaId: null, texto: '' };
+    irPara('passagem');
+  }
+
+  // ---------- Revelação ----------
+  function desenharRevelacao() {
+    const r = Jogo.montarRevelacao(estado);
+    const maior = Math.max(...r.serieAlcance);
+
+    const grafico = el('div', { class: 'grafico-rolagem' },
+      el('div', { class: 'grafico', role: 'img', 'aria-label': `Alcance da notícia, de ${formatar.format(r.serieAlcance[0])} para ${formatar.format(r.serieAlcance[r.serieAlcance.length - 1])} pessoas` },
+        r.serieAlcance.map((alcance, i) => {
+          const barra = el('div', { class: i === 0 ? 'barra original' : 'barra' },
+            el('span', { class: 'valor', texto: formatar.format(alcance) }),
+            el('span', { class: 'coluna' }),
+          );
+          barra.lastChild.style.height = `${(alcance / maior) * 100}%`;
+          return barra;
+        }),
+      ),
+      el('div', { class: 'rotulos', 'aria-hidden': 'true' },
+        r.serieAlcance.map((_, i) => el('span', { texto: i === 0 ? 'original' : `versão ${i}` })),
+      ),
+    );
+
+    mostrar(
+      el('p', { class: 'cartola', texto: `Revelação · a notícia passou por ${r.versoes.length} mãos` }),
+      el('h1', { texto: 'O que aconteceu com a notícia' }),
+
+      el('section', { class: 'comparacao' },
+        el('article', { class: 'recorte' },
+          el('p', { class: 'cartola', texto: 'Como ela começou' }),
+          el('p', { class: 'texto', texto: r.original }),
+        ),
+        el('article', { class: 'recorte final' },
+          el('p', { class: 'cartola', texto: 'Como ela terminou' }),
+          el('p', { class: 'texto', texto: r.final }),
+        ),
+      ),
+
+      el('section', { class: 'bloco' },
+        el('h2', { texto: 'O caminho, mão a mão' }),
+        el('ol', { class: 'linha-do-tempo' },
+          r.versoes.map((v) => el('li', {},
+            el('p', { class: 'meta' },
+              `Versão ${v.numero} · `, el('strong', { texto: v.autor }), ` · ${v.tecnica.nome} (+${v.tecnica.valor})`,
+            ),
+            el('p', { class: 'texto', texto: v.texto }),
+          )),
+        ),
+      ),
+
+      el('section', { class: 'bloco' },
+        el('h2', { texto: 'Quantas pessoas a notícia alcançou' }),
+        el('p', { class: 'suave', texto: `Começou com ${formatar.format(r.serieAlcance[0])} leitores e chegou a ${formatar.format(r.serieAlcance[r.serieAlcance.length - 1])}.` }),
+        grafico,
+      ),
+
+      el('section', { class: 'bloco' },
+        el('h2', {}, 'O algoritmo mais premiou: ', el('span', { class: 'destaque', texto: r.vencedores.join(' e ') })),
+        el('p', { texto: 'Ele não leu nenhuma versão. Só contou quanto cada técnica provocava. Quanto mais a notícia se afastou do fato, mais longe ela chegou.' }),
+        el('ol', { class: 'placar' },
+          r.placar.map((p) => el('li', {}, el('span', { texto: p.nome }), el('span', { texto: `${p.engajamento} de engajamento` }))),
+        ),
+      ),
+
+      r.origem ? el('section', { class: 'origem' },
+        el('p', { class: 'cartola', texto: 'De onde veio esta notícia' }),
+        el('p', { texto: 'A notícia de partida parecia absurda. Ela foi inspirada num fato real, que aconteceu em outro lugar:' }),
+        el('p', { texto: r.origem.texto }),
+        el('p', {}, el('a', { href: r.origem.link, target: '_blank', rel: 'noopener', texto: 'Ler a fonte' })),
+      ) : null,
+
+      el('section', { class: 'bloco' },
+        el('h2', { texto: 'Para conversar agora' }),
+        el('ul', { class: 'perguntas' },
+          el('li', { texto: 'Qual técnica rendeu mais engajamento?' }),
+          el('li', { texto: 'Você compartilharia a versão final se a visse no feed?' }),
+          el('li', { texto: 'O que o algoritmo premiou?' }),
+        ),
+        el('p', { class: 'suave', texto: 'Para jogar de novo, recarregue a página.' }),
+      ),
+    );
+  }
+
+  // Mantém a partida quando a página publicada é atualizada com alguém jogando.
+  function iniciar(salvo) {
+    if (salvo && salvo.tela) {
+      tela = salvo.tela;
+      nomes = salvo.nomes || nomes;
+      rascunho = salvo.rascunho || rascunho;
+      estado = salvo.estado ? { ...salvo.estado, aleatorio: Math.random } : null;
+      if (!estado && tela !== 'cadastro') tela = 'cadastro';
+    }
+    desenhar();
+  }
+  const quente = window.claude && window.claude.hot;
+  if (quente && quente.snapshot) {
+    quente.snapshot(() => ({ tela, nomes, rascunho, estado: estado ? { ...estado, aleatorio: undefined } : null }));
+  }
+  if (quente && quente.ready) quente.ready(iniciar);
+  else iniciar(quente && quente.data ? quente.data : {});
+})();
+</script>
+</body>
+</html>
